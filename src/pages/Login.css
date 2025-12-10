@@ -1,0 +1,18 @@
+/*  Bu dosya sadece Login'e özel stilleri barındırır. 
+ */
+
+.login-button {
+    background-color: #00796b !important;
+
+}
+
+.login-button:hover {
+    background-color: #004d40 !important;
+
+}
+
+
+.login-form-wrapper {
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
