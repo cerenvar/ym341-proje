@@ -1,0 +1,59 @@
+.home-container {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    /* Dashboard için geniş bir alan */
+    min-height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    /* Sayfada ortalanmış boşluk */
+}
+
+.home-container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.home-container h1 {
+    color: #004d40;
+    font-size: 2em;
+    margin: 0;
+}
+
+.home-container main {
+    flex-grow: 1;
+    /* Ana içeriğin esnemesini sağlar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* İçeriği dikeyde ortalar */
+    align-items: center;
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* Çıkış Yap Butonu */
+.logout-button {
+    background-color: #f44336;
+    /* Kırmızı renk */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}

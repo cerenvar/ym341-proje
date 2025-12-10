@@ -1,0 +1,8 @@
+/* SignUp Form Kutusu Stili  */
+.signup-form-wrapper {
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Diğer tüm form stilleri AuthForms.css'ten alınacaktır. */

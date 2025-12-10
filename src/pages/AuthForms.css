@@ -1,0 +1,295 @@
+/*Sayfa düzeni*/
+
+.login-page-layout {
+    display: flex;
+    justify-content: space-between;
+    /* İki bölümü ayırır */
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    /* ARKA PLAN AYARLARI */
+    background-image: url(../assets/Gemini_Generated_Image_o66c6lo66c6lo66c.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Sol Taraftaki Hoş Geldiniz Yazısı */
+.welcome-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    text-align: center;
+}
+
+/* YAZI KAPSAYICISI: Yazıları Dikey Hizalama ve Yukarı Kaydırma */
+.welcome-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-120px);
+}
+
+/* Alt Başlık Stili (Küçük Boyut ve Belirginlik) */
+.welcome-subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.welcome-text {
+    font-family: 'Georgia', serif;
+    font-size: 3.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Sağ Taraftaki Form Konteyneri */
+.auth-form-container {
+    flex: 1.2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.form-wrapper {
+    /* Login ve Signup'ta ortak olan form kutusu */
+    background: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    /* Form kutusu genişliği */
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .login-page-layout {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .welcome-section {
+        flex: none;
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    /* Mobil cihazlarda yukarı kaydırmayı sıfırlama */
+    .welcome-text-container {
+        transform: translateY(0);
+    }
+
+    .welcome-text {
+        font-size: 2.5em;
+    }
+
+    /* Mobil için alt başlık boyutunu küçültme */
+    .welcome-subtitle {
+        font-size: 1em;
+    }
+
+    .form-logo {
+        height: 30px;
+    }
+
+    .auth-form-container {
+        flex: none;
+        width: 100%;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .form-wrapper {
+        max-width: 380px;
+    }
+}
+
+
+/* Ortak Form Elementleri ( Login ve Sign up için */
+
+/* Logo ve Başlık Hizalaması */
+.form-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+/* Logo Stili */
+.form-logo {
+    height: 90px;
+    width: auto;
+}
+
+/* Başlık H2 Margin Düzenlemesi (Logo ile hizalanması için) */
+.form-wrapper h2 {
+    color: #00695c;
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-weight: 800;
+    font-size: 28px;
+    margin-top: -10px;
+    padding-bottom: 15px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #00897b;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 137, 123, 0.2);
+}
+
+
+/* Beni Hatırla ve Şifremi Unuttum */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    color: #555;
+}
+
+.remember-me input {
+    margin-right: 8px;
+    width: auto;
+}
+
+.forgot-password {
+    color: #00897b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #004d40;
+    text-decoration: underline;
+}
+
+/* Toggle Text (Kaydol / Giriş Yap) */
+.toggle-text {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #555;
+}
+
+.toggle-text span {
+    color: #00897b;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.toggle-text span:hover {
+    color: #004d40;
+    text-decoration: underline;
+}
+
+/* Ortak Düğme Stili (login-button ve signup-button için varsayılan) */
+.form-wrapper button {
+    /*  GÜNCELLEME 1: Gradient arka plan */
+    background: linear-gradient(135deg, #00897b 0%, #00695c 100%);
+
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 100%;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 137, 123, 0.4);
+
+    font-weight: 600;
+}
+
+.form-wrapper button:hover {
+    background-color: #00695c;
+    transform: translateY(-2px);
+}
+
+
+/* --- Mesaj Kutusu Stilleri (SignUp ve Login için) --- */
+
+/* Mesaj kutularının ortak temeli */
+.message-box {
+    /* Butonun hemen altında gözükmesi için */
+    margin-top: 20px;
+
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+
+    /* Formun şeffaf arka planından ayrılması için hafif gölge */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    /* Metin sola hizalı olsun */
+}
+
+/* Başarı Mesajı Stili  */
+.message-box.success {
+    background-color: #e0f7fa;
+    color: #00796b;
+    border: 1px solid #b2ebf2;
+}
+
+.message-box.error {
+    background-color: #fff0f0;
+    color: #a33b3b;
+    border: 1px solid #e6c8c8;
+}
+
+.message-box.success span {
+    font-weight: bold;
+    color: #004d40;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.message-box.success span:hover {
+    color: #00897b;
+}
